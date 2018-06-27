@@ -18,6 +18,9 @@ public class Main {
         WebDriver driver = new ChromeDriver();
         AutomateShuttleBooking obj = new AutomateShuttleBooking(driver);
         obj.OpenRms();
+        // @ Params for EnterCredentials
+        // 1. userName in string.
+        // 2. password as string
         obj.EnterCredentials("UserName", "Password");
         obj.Login();
         obj.Create();
