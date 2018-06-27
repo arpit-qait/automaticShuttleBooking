@@ -46,15 +46,20 @@ public class AutomateShuttleBooking {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".oe_button.oe_list_add.oe_highlight")));
         driver.findElement(By.cssSelector(".oe_button.oe_list_add.oe_highlight")).click();
     }
-    public void FillDetails(){
+    public void FillDetails(String time, String number, int index){
         WebDriverWait wait = new WebDriverWait(driver,20);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".oe_button.oe_form_button_save")));
-        driver.findElement(By.id("oe-field-input-9")).sendKeys("7:15pm");
-        driver.findElement(By.id("oe-field-input-9")).click();
+        driver.findElement(By.id("oe-field-input-9")).sendKeys(time);
         
+            driver.findElement(By.id("oe-field-input-9")).sendKeys(Keys.ARROW_DOWN);
+            driver.findElement(By.id("oe-field-input-9")).sendKeys(Keys.ARROW_DOWN);
+            driver.findElement(By.id("oe-field-input-9")).sendKeys(Keys.ENTER);
+//        driver.findElement(By.id("oe-field-input-9")).click();
+        driver.findElement(By.id("oe-field-input-8")).sendKeys(number);
         Select dropdown = new Select(driver.findElement(By.id("oe-field-input-10")));
-        dropdown.selectByIndex(3);
-        driver.findElement(By.id("oe-field-input-8")).sendKeys("8299619940");
+        dropdown.selectByIndex(index);
+        driver.findElement(By.xpath("//span[.='Request for Drop off']")).click();
+        
     }
     
 }
