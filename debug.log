@@ -1,0 +1,6 @@
+[0627/112656.318:ERROR:crash_report_database_win.cc(569)] CreateDirectory C:\Users\ARPITA~1\AppData\Local\Temp\scoped_dir4308_20717\Crashpad: There is not enough space on the disk. (0x70)
+[0627/112656.318:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0627/112656.318:ERROR:crash_report_database_win.cc(569)] CreateDirectory C:\Users\ARPITA~1\AppData\Local\Temp\scoped_dir4308_20717\Crashpad: There is not enough space on the disk. (0x70)
+[0627/131201.048:ERROR:crash_report_database_win.cc(569)] CreateDirectory C:\Users\ARPITA~1\AppData\Local\Temp\scoped_dir9468_1700\Crashpad: There is not enough space on the disk. (0x70)
+[0627/131201.048:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0627/131201.063:ERROR:crash_report_database_win.cc(569)] CreateDirectory C:\Users\ARPITA~1\AppData\Local\Temp\scoped_dir9468_1700\Crashpad: There is not enough space on the disk. (0x70)
