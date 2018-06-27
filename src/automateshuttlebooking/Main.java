@@ -18,9 +18,13 @@ public class Main {
         WebDriver driver = new ChromeDriver();
         AutomateShuttleBooking obj = new AutomateShuttleBooking(driver);
         obj.OpenRms();
-        obj.EnterCredentials("Arpitagarwal", "Arpit@321#");
+        obj.EnterCredentials("UserName", "Password");
         obj.Login();
         obj.Create();
-        obj.FillDetails("8:15pm", "8299619940", 2);
+        // @ Params for FillDetails
+        // 1. time in string. eg. 7:15pm
+        // 2. number as string
+        // 3. index. 1 for Sector 61, 2 for City Center
+        obj.FillDetails("time", "number", 2);
     }
 }
