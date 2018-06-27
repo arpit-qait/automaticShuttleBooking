@@ -21,5 +21,6 @@ public class Main {
         obj.EnterCredentials("Arpitagarwal", "Arpit@321#");
         obj.Login();
         obj.Create();
+        obj.FillDetails();
     }
 }

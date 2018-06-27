@@ -7,8 +7,12 @@
 package automateshuttlebooking;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  *
@@ -38,8 +42,19 @@ public class AutomateShuttleBooking {
     }
     
     public void Create(){
-        driver.findElement(By.cssSelector("oe_button.oe_list_add.oe_highlight")).click();
+        WebDriverWait wait = new WebDriverWait(driver,20);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".oe_button.oe_list_add.oe_highlight")));
+        driver.findElement(By.cssSelector(".oe_button.oe_list_add.oe_highlight")).click();
     }
-    
+    public void FillDetails(){
+        WebDriverWait wait = new WebDriverWait(driver,20);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".oe_button.oe_form_button_save")));
+        driver.findElement(By.id("oe-field-input-9")).sendKeys("7:15pm");
+        driver.findElement(By.id("oe-field-input-9")).click();
+        
+        Select dropdown = new Select(driver.findElement(By.id("oe-field-input-10")));
+        dropdown.selectByIndex(3);
+        driver.findElement(By.id("oe-field-input-8")).sendKeys("8299619940");
+    }
     
 }
